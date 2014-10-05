@@ -504,11 +504,7 @@ const (
 	INT_VEC3                                      = C.GL_INT_VEC3
 	INT_VEC4                                      = C.GL_INT_VEC4
 	INT                                           = C.GL_INT
-	INVALID_ENUM                                  = C.GL_INVALID_ENUM
-	INVALID_FRAMEBUFFER_OPERATION                 = C.GL_INVALID_FRAMEBUFFER_OPERATION
 	INVALID_INDEX                                 = C.GL_INVALID_INDEX
-	INVALID_OPERATION                             = C.GL_INVALID_OPERATION
-	INVALID_VALUE                                 = C.GL_INVALID_VALUE
 	INVERTED_SCREEN_W_REND                        = C.GL_INVERTED_SCREEN_W_REND
 	INVERT                                        = C.GL_INVERT
 	KEEP                                          = C.GL_KEEP
@@ -703,7 +699,6 @@ const (
 	NEAREST                                       = C.GL_NEAREST
 	NEVER                                         = C.GL_NEVER
 	NICEST                                        = C.GL_NICEST
-	NO_ERROR                                      = C.GL_NO_ERROR
 	NONE                                          = C.GL_NONE
 	NOOP                                          = C.GL_NOOP
 	NORMAL_ARRAY_BUFFER_BINDING                   = C.GL_NORMAL_ARRAY_BUFFER_BINDING
@@ -735,7 +730,6 @@ const (
 	OR_INVERTED                                   = C.GL_OR_INVERTED
 	OR_REVERSE                                    = C.GL_OR_REVERSE
 	OR                                            = C.GL_OR
-	OUT_OF_MEMORY                                 = C.GL_OUT_OF_MEMORY
 	PACK_ALIGNMENT                                = C.GL_PACK_ALIGNMENT
 	PACK_IMAGE_HEIGHT                             = C.GL_PACK_IMAGE_HEIGHT
 	PACK_LSB_FIRST                                = C.GL_PACK_LSB_FIRST
@@ -1050,8 +1044,6 @@ const (
 	SRGB8                                         = C.GL_SRGB8
 	SRGB_ALPHA                                    = C.GL_SRGB_ALPHA
 	SRGB                                          = C.GL_SRGB
-	STACK_OVERFLOW                                = C.GL_STACK_OVERFLOW
-	STACK_UNDERFLOW                               = C.GL_STACK_UNDERFLOW
 	STATIC_COPY                                   = C.GL_STATIC_COPY
 	STATIC_DRAW                                   = C.GL_STATIC_DRAW
 	STATIC_READ                                   = C.GL_STATIC_READ
