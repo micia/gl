@@ -11,6 +11,8 @@ import "C"
 
 type Renderbuffer Object
 
+const NoneRenderbuffer Renderbuffer = 0
+
 // void glGenRenderbuffers(GLsizei n, GLuint *renderbuffers)
 func GenRenderbuffer() Renderbuffer {
 	var b C.GLuint
@@ -28,11 +30,6 @@ func GenRenderbuffers(bufs []Renderbuffer) {
 // void glBindRenderbuffer(GLenum target, GLuint renderbuffer);
 func (rb Renderbuffer) Bind() {
 	C.glBindRenderbuffer(C.GLenum(RENDERBUFFER), C.GLuint(rb))
-}
-
-// Unbind this texture
-func (rb Renderbuffer) Unbind() {
-	C.glBindRenderbuffer(C.GLenum(RENDERBUFFER), 0)
 }
 
 // void glDeleteRenderbuffers(GLsizei n, GLuint* renderbuffers);

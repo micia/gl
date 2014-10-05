@@ -38,6 +38,8 @@ func ActiveTexture(texture GLenum) { C.glActiveTexture(C.GLenum(texture)) }
 
 type Texture Object
 
+const NoneTexture Texture = 0
+
 // Create single texture object
 func GenTexture() Texture {
 	var b C.GLuint
@@ -68,11 +70,6 @@ func DeleteTextures(textures []Texture) {
 // Bind this texture as target
 func (texture Texture) Bind(target GLenum) {
 	C.glBindTexture(C.GLenum(target), C.GLuint(texture))
-}
-
-// Unbind this texture
-func (texture Texture) Unbind(target GLenum) {
-	C.glBindTexture(C.GLenum(target), 0)
 }
 
 //void glTexImage1D (GLenum target, int level, int internalformat, int width, int border, GLenum format, GLenum type, const GLvoid *pixels)

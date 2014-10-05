@@ -10,6 +10,8 @@ import "C"
 // Vertex Arrays
 type VertexArray Object
 
+const NoneVertexArray VertexArray = 0
+
 func GenVertexArray() VertexArray {
 	var a C.GLuint
 	C.glGenVertexArrays(1, &a)
@@ -34,8 +36,4 @@ func DeleteVertexArrays(arrays []VertexArray) {
 
 func (array VertexArray) Bind() {
 	C.glBindVertexArray(C.GLuint(array))
-}
-
-func (array VertexArray) Unbind() {
-	C.glBindVertexArray(C.GLuint(0))
 }

@@ -13,6 +13,8 @@ import "reflect"
 
 type Buffer Object
 
+const NoneBuffer Buffer = 0
+
 // Create single buffer object
 func GenBuffer() Buffer {
 	var b C.GLuint
@@ -43,11 +45,6 @@ func DeleteBuffers(buffers []Buffer) {
 // Bind this buffer as target
 func (buffer Buffer) Bind(target GLenum) {
 	C.glBindBuffer(C.GLenum(target), C.GLuint(buffer))
-}
-
-// Remove buffer binding
-func (buffer Buffer) Unbind(target GLenum) {
-	C.glBindBuffer(C.GLenum(target), C.GLuint(0))
 }
 
 // Bind this buffer as index of target

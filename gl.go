@@ -472,11 +472,6 @@ func GetDouble4(pname GLenum) (v0, v1, v2, v3 float64) {
 	return
 }
 
-//GLenum glGetError (void)
-func GetError() GLenum {
-	return GLenum(C.glGetError())
-}
-
 //void glGetFloatv (GLenum pname, float *params)
 func GetFloatv(pname GLenum, params []float32) {
 	if len(params) == 0 {

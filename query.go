@@ -9,6 +9,8 @@ import "C"
 
 type Query Object
 
+const NoneQuery Query = 0
+
 func GenQuery() (q Query) {
 	C.glGenQueries(1, (*C.GLuint)(&q))
 	return

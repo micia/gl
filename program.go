@@ -15,6 +15,8 @@ import "unsafe"
 
 type Program Object
 
+const NoneProgram Program = 0
+
 func CreateProgram() Program { return Program(C.glCreateProgram()) }
 
 func (program Program) Delete() { C.glDeleteProgram(C.GLuint(program)) }
@@ -59,11 +61,6 @@ func (program Program) Link() { C.glLinkProgram(C.GLuint(program)) }
 func (program Program) Validate() { C.glValidateProgram(C.GLuint(program)) }
 
 func (program Program) Use() { C.glUseProgram(C.GLuint(program)) }
-
-func (program Program) Unuse() { C.glUseProgram(C.GLuint(0)) }
-
-// Deprecated, please use program.Unuse()
-func ProgramUnuse() { C.glUseProgram(C.GLuint(0)) }
 
 func (program Program) GetInfoLog() string {
 	var length C.GLint
